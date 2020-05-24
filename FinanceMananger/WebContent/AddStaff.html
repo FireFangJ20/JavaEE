@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>管理员添加员工信息</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/StaffRevise.css">
+<link rel="stylesheet" href="css/button.css">
+<script src="jquery/jquery-1.9.1.min.js"></script>
+<!-- 注意路径的引用要正确 -->
+</head>
+
+<body>
+	<div class="container information-content">
+		<div class="content">
+			<div class="information-title">
+				<span>当前位置>添加员工信息</span>
+
+			</div>
+			<div class="revise-content clearfix ">
+				<!-- <a id="edit" href="javascript:;" style="text-decoration:underline;color:grey;float:left" title="点此进行编辑">编辑</a> -->
+				<form action="AdminServlet?met=addStaff" method="post">
+					<div class="list fr">
+						<label>姓名</label> : <input id="input_sname" name="sname"
+							type="text" />
+					</div>
+					<div class="list fr">
+						<label>密码</label> : <input id="input_spwd" name="spwd" type="text" />
+					</div>
+					<div class="list fr ">
+						<label>薪资</label> : <input id="input_salary" type="text"
+							name="salary" />
+					</div>
+					<div class="list fr">
+						<label>部门</label> : <input id="input_department" type="text"
+							name="department" />
+					</div>
+					<div class="list1">
+						<button onclick="check()" id="yes" type="submit" class="button">完
+							&nbsp;&nbsp;成</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<script>
+		function check() {
+			var a = document.getElementById("input_sname").value;
+			var b = document.getElementById("input_spwd").value;
+			var c = document.getElementById("input_salary").value;
+			var d = document.getElementById("input_department").value;
+			if (a==""||b==""||c==""||d=="") {
+				alert('不能有空内容！请重新填写');
+				$('#yes').attr('type', 'button');
+				location.href = "AddStaff.html";
+			}
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<!-- <link rel="stylesheet" type="text/css" href="css/login-my.css"> -->
+		<link rel="icon" href="images/my01.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="images/my01.ico" type="image/x-icon" />
+		<link rel="bookmark" href="images/my01.ico" type="image/x-icon" />
+		<script src="/jquery/jquery-3.2.1.min.js"></script>
+		<title>财务管理系统-主页</title>
+	</head>
+
+	<body>	
+			<div class="top">
+			nihao	
+			</div>
+			<div class="login_box">							
+				<form action="ChooseServlet?type=login" method="post" >
+					<div class="login" >
+						<table>
+							<tr>
+									<span>
+										<font face="SongTi" color="black">欢迎访问小型财务管理系统</font>
+									</span>
+							</tr>
+							<tr>
+								<td><font >账号：</font></td>
+								<td><input type="text" id="snaem" name="name"  value="" placeholder="请输入你的用户名" onfocus="this.placeholder=''" onblur="this.placeholder='请输入你的用户名'"/></td>
+								
+							</tr>
+							<tr class="height">
+								
+							</tr>
+							<tr>
+								<td><font >密码：</font></td>
+								<td><input type="password" name="pwd" value="" placeholder="请输入你的密码" onfocus="this.placeholder=''" onblur="this.placeholder='请输入你的密码'"/></td>
+							</tr>
+								<tr class="height">
+								
+							</tr>
+							<tr>
+								<td colspan="2" style="text-align: right;">
+								<font size="3px" face="SongTi" color="black">选择身份：</font>
+									<select name="choose"  >
+										<option value="staff" id="staff">员    工</option>
+										<option value="admin" id="admin">管理员</option>
+									</select>
+									
+								</td>
+									
+									
+							</tr>
+								<tr class="height">
+							</tr>
+							<tr>
+								<td colspan="2" >
+								<button type="submit" class="button"><span><font size="5px">登&nbsp;&nbsp;录</font></span></button>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</form>
+				</div>
+	</body>
+</html>

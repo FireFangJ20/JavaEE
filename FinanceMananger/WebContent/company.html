@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>公司资产信息</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/StaffRevise.css">
+<style>
+.body{
+background-image:url(images/worldmap.jpg);
+background-size:100% 100%;
+width:1156px;
+/* height:572px; */}
+</style>
+<script type="text/javascript">
+var timer;
+window.onload= function s(){
+    document.getElementById("text").scrollTop++;
+    timer=setTimeout("s()",1000);
+}
+function document.onclick(){
+    clearTimeout(timer);
+}
+document.ondblclick=s;
+/* window.onload = function (){
+var a = document.getElementById("text");
+a.scrollTop = a.scrollHeight;
+} */
+</script>
+</head>
+<body class="body">
+            <br>&nbsp;&nbsp;&nbsp;&#9;<span><font color="#666">当前位置>公司信息</font></span>
+        <div align="center"><!-- <button onclick="text.scrollTop=text.scrollHeight">滚动</button> -->
+			<textarea id="text" rows="20" cols="40" style="margin-top:80px;background:none;border:none;scroll:hidden" disabled>            公   司   信   息
+
+    zipmap公司成立于2000年5月，zipmap公司致力于线下地图与人工智能导航的研究与设计。公司位于珍珠河畔，占地面积达1000亩，拥有员工3000余人，自主开发的软件套件ideaMap、UTalk2Me、SmartEye等已经在卫星导航、VR市场占据很大的空间。
+    2002年12月，公司与智汇科技集团合作，研发出新一代导航引擎，该引擎的最大特点就是不需要人工操作，可以根据用户的指令设置，完成一系列的听觉、视觉、触觉回馈，达到真正的安全，高效，精准导航。
+    2005年10月，zipmap公司成立子公司BigData公司（本公司），专门处理数据的更新与客户的沟通。
+    BigData，让冗余的数据变得简洁，让繁琐的收集工作变得轻松有趣！[zipmap]子公司[BigData]欢迎您！
+
+                   maker
+    Tom                    ***6593
+    青鸟|                  ***2236
+    iky                    ***5566</textarea>
+        </div>   
+</body>
+</html>

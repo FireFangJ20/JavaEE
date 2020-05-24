@@ -1,0 +1,77 @@
+@charset "UTF-8";
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body,html{
+	height: 100%;
+}
+.nav{
+	/* width: 200px;210px */
+	
+	height: 100%;
+	
+	color: #c1c1c1;
+	background-image:url(../images/登录背景2.png);
+	background-size:100% 100%; 
+}
+.nav .nav-list{
+	width: 100%;
+	padding-top: 30px;
+}
+.nav .nav-list .nav-tit{
+	width: 100%;
+	line-height: 30px;
+	margin-bottom: 40px;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 30px;
+}
+.nav .nav-list .nav-tit:hover{
+	background: darkseagreen;
+	box-shadow: 2px 2px 2px yellow;
+}
+.nav .nav-list .nav-tit a{
+	text-decoration: none;
+	color: #ffffff;
+	/* background:#1e7cc1; */
+}
+.nav .nav-list .nav-tit img{
+	width: 21px;
+	height: 21px;
+	vertical-align: middle;
+}
+.nav .nav-list .nav-tit span{
+	margin-left: 10px;
+}
+.nav .nav-list .personal-list{
+	width: 90px;
+	height: 10px;
+	margin-left: 30px;
+	margin-bottom: 25px;
+	font-size: 14px;
+	display: none;
+	position: relative;
+	left: 55px;
+	top: -35px;
+}
+.nav .nav-list .personal-list li{
+	width: 100%;
+	margin-bottom: 15px;
+	text-align: center;
+	line-height: 25px;
+	border-radius: 3px;
+}
+.nav .nav-list .personal-list li a{
+	text-decoration: none;
+	color: #fff;
+}
+.nav .nav-list .personal-list li.active{
+	background: #0e8384;
+	box-shadow: 2px 2px 2px orangered;
+}
+.nav .nav-list .personal-list li:hover{
+	background: darkseagreen;
+	box-shadow: 2px 2px 2px yellow;
+}

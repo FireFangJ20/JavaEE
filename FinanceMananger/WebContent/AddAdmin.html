@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>添加管理员</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/StaffRevise.css">
+<script src="jquery/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+	<div class="container information-content">
+		<div class="content">
+			<div class="information-title">
+				<span>当前位置>添加管理员</span>
+			</div>
+			<div class="revise-content clearfix ">
+				<!-- <a id="edit" href="javascript:;"
+					style="text-decoration: underline; color: grey; float: left"
+					title="点此添加管理员信息">编辑</a> -->
+				<form action="AdminServlet?met=addAdmin" method="post">
+					<div class="list fr">
+						<label>姓名</label> : <input id="input_aname" type="text" value="" name="aname"
+							 />
+					</div>
+					<div class="list fr">
+						<label>密码</label> : <input id="input_apwd" type="password" value="" name="apwd"
+							 />
+					</div>
+					<div class="list1 ">
+						<button onclick="check()" id="yes" class="button" type="submit"
+							>提  交</button>
+					</div>
+				</form>
+			</div>
+
+		</div>
+	</div>
+	<script type="text/javascript">
+	$('#edit').on('click', function() {
+		$('input').removeAttr('disabled');
+		$('#yes').removeAttr('style');
+	});
+	function check() {
+		var a = document.getElementById("input_aname").value;
+		var b = document.getElementById("input_apwd").value;
+		if (a==""||b=="") {
+			alert('不能有空内容！请重新填写');
+			$('#yes').attr('type', 'button');
+			location.href = "AddAdmin.html";
+		}
+	}
+	</script>
+</body>
+</html>

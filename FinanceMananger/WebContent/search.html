@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>搜索用户</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/search.css">
+<script src="js/toast.js"></script>
+<script src="js/jquery-1.9.1.min.js"></script>
+
+<style type="text/css">
+.active{
+margin-left: 10px;
+box-shadow: 2px 2px 2px orangered;
+}
+</style>
+</head>
+
+<body>
+	<div class="container">
+		<div class="search-content content clearfix">
+			<div class="search-bar  clearfix ">
+				<form action="" method="post">
+
+					<p>
+						<img alt="" src="images/soso.png"><input type="text"
+							name="SID" style="height: 30px; width: 400px; margin-left: 80px"
+							placeholder="..选择搜索域" />
+					</p>
+
+					<button type="submit" class="button fr" onclick="check()">搜 索</button>
+				</form>
+				<div class="word fl">搜 索 域</div>
+				<div class="list fl">
+					<input id="box-staff" type="checkbox" value="staff" class="s"/> <span class="s">员
+						工</span>
+					<ul class="clearfix">
+						<li class="s">工号</li>
+					</ul>
+					<ul class="clearfix">
+						<li class="s">姓名</li>
+					</ul>
+				</div>
+				<div class="list fl">
+					<input id="box-guest" type="checkbox" value="guest" class="g"/> <span class="g">客
+						户</span>
+					<ul class="clearfix">
+						<li class="g">编号</li>
+					</ul>
+					<ul class="clearfix">
+						<li class="g">姓名</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+$(function (){
+	
+	$("#box-staff").on('click',function (){
+		var a = document.getElementById("box-staff").checked;
+		var b = document.getElementById("box-guest");
+		var c = $("input[name='SID']");
+		if(a){		
+			$('.s').addClass('active');
+			$('.g').removeClass('active');
+			c.attr('placeholder','...搜索员工信息');
+			$('form').attr('action','AdminServlet?met=selectById');
+		} else {
+			$('.s').removeClass('active');
+			c.attr('placeholder','..选择搜索域');
+			$('form').attr('action','');
+		}
+		b.checked = false;	
+	});
+	 
+	$("#box-guest").on('click',function (){
+		var a = document.getElementById("box-staff");
+		var b = document.getElementById("box-guest").checked;
+		var c = $("input[name='SID']");
+		if(b){
+			$('.g').addClass('active');
+			$('.s').removeClass('active');
+			c.attr('placeholder','...搜索客户信息');
+			$('form').attr('action','GuestServlet?met=searchGuest');	
+		} else {
+			$('.g').removeClass('active');
+			c.attr('placeholder','..选择搜索域');
+			$('form').attr('action','');
+		}
+		a.checked = false;
+	});	
+	
+});
+
+function check(){
+	var n = $('form').attr('action');
+	var m = $('button');
+	if(n == ""){
+		m.attr('type','button');
+		Toast("请选择搜索域",1000);
+	} else {
+		m.attr('type','submit');
+	}
+}
+</script>
+</body>
+
+</html>

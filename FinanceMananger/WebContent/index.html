@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>企业财务管理系统</title>
+ 		<link rel="stylesheet" href="css/common.css">
+ 		<link rel="stylesheet" href="css/StaffRevise.css">
+ 		<script src="js/jquery-1.9.1.min.js"></script>
+ 		<script src="js/toast.js"></script>
+ 		<script>
+			$(function (){
+				var login = getMyCookie("LoginStat");
+				if(login=="success"){
+					Toast("登录成功！",3000);
+				}/*  else {
+					Toast("没有得到cookie！",3000);
+				} */
+			});
+	
+			function getMyCookie(key){
+				var val = "";
+				var cookies = document.cookie;
+				cookies = cookies.replace(/\s/,"");
+				var cookie_array = cookies.split(";");
+				for(i=0;i<cookie_array.length;i++){
+					var cookie = cookie_array[i];
+					var array = cookie.split("=");
+					if(array[0]==key){
+						val = array[1];
+					}
+				}
+				return val;
+			}
+		</script>
+	</head>
+ 	<body>
+	 	<div class="container information-content">
+		    <div class="content">
+		        <div class="information-title">
+		            <span>
+		            	<font color="red">当前时间：
+		            		<span id="time"></span>
+								<script>
+								setInterval(function(){
+								document.getElementById("time").innerHTML = new Date().toLocaleString();
+								},1000)
+								</script>
+						</font>
+					</span>
+		        </div>
+		        <div class="revise-content clearfix ">
+			        <form action="" method="post">
+			            <div class="list fr"></div>
+			            <div class="list fr "></div>
+			            <div class="list1 "></div>
+			        </form>
+		        </div>     
+		    </div>
+		</div>
+	</body>
+</html>

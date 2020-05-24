@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>添加客户信息</title>
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/StaffRevise.css">
+<script src="jquery/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div class="container information-content">
+		<div class="content">
+			<div class="information-title">
+				<span>当前位置>添加客户信息</span>
+			</div>
+			<div class="revise-content clearfix ">
+				<form action="AdminServlet?met=addGuest" method="post">
+					<div class="list fr">
+						<label>姓名</label> : <input id="input_gname" name="gname" type="text" />
+					</div>
+					<div class="list fr">
+						<label>地址</label> : <input id="input_gaddress" name="gaddress" type="text" />
+					</div>
+					<div class="list fr ">
+						<label>联系方式</label> : <input id="input_gphone" type="text" name="gphone" />
+					</div>
+					<div class="list1">
+						<button onclick="check()" id="yes" type="submit" class="button" >完    成</button>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	<script>
+		$('#edit')
+				.on(
+						'click',
+						function() {
+							$('input').removeAttr('disabled');
+							$('#yes').removeAttr('style');
+						});
+		function check() {
+			var a = document.getElementById("input_gname").value;
+			var b = document.getElementById("input_gaddress").value;
+			var c = document.getElementById("input_gphone").value;
+			if (a==""||b==""||c=="") {
+				alert('不能有空内容！请重新填写');
+				$('#yes').attr('type', 'button');
+				location.href = "AddGuest.html";
+			}
+		}
+	</script>
+</body>
+</html>

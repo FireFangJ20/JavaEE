@@ -1,0 +1,103 @@
+/* 全部 员工\管理员\客户 的基本信息表的样式 */
+
+	/* 主体 样式 */
+body {
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+table {
+	border: 1px inset #c0c0c0;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px #2f2f2f;
+}
+	/* 批量删除 样式 */
+.delBySelected {
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px black;
+	height: 30px;
+}
+	/* 列表标题 样式*/
+.listHead {
+	background: #1e7cc1; 
+	color: white; 
+	height: 30px;
+}
+	/* 列表内容 样式*/
+.STYLE6 {
+	color: #000000;
+	font-size: 14px;
+}
+
+.STYLE10 {
+	color: #000000;
+	font-size: 20px;
+}
+	/* 旧版 上一页\下一页 的样式 */
+.PageBox {
+	position: fixed;
+	width: 60%;
+	margin-left: 360px;
+	bottom: 100px;
+}
+
+.PageBox .page {
+	height: 50px;
+	min-width: 800px;
+	background: rgb(255, 255, 255); /* #007CBC; */
+	text-align: center;
+	margin-left: -150px;
+	margin-top: -150px;
+}
+
+.PageBox .page ul li a {
+	text-decoration: none;
+	color: white;
+}
+
+li+li {
+	border-left: 1px solid white;
+}
+
+.PageBox .page ul li {
+	display: block;
+	float: left;
+	width: 150px;
+	text-align: center;
+	line-height: 50px;
+}
+
+	/* 新版 上一页\下一页 的样式 */
+.Href {
+	text-decoration: none;
+	display: inline-block;
+	width: 40px;
+	background: lightgrey;
+	text-align: center;
+	color: black;
+}
+
+.Href:hover {
+	box-shadow: 6px 6px 6px black;
+	border-radius: 5px;
+	background: orange;
+}
+	/* 页码效果 */
+.pageCount {
+	background: lightblue;
+}
+.pageCount:hover{
+	background: skyblue;
+	box-shadow: 2px 2px 2px grey;
+}
+
+.btn {
+	background:lightgrey;
+	height:25px;
+	border-radius:5px;
+	border:2px outset #8080ff;
+	cursor: pointer;
+}
+.btn:hover {
+	background:skyblue;
+	box-shadow: 6px 6px 6px black;
+}

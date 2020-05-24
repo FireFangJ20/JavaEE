@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>小型财务管理系统-管理员界面</title>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/welcome.js"></script>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.bx{
+				height: 60px;
+				width: 100%;
+				/* background:green; */
+			}
+			.bx .container{
+				margin: 0 60px;
+				overflow: hidden;
+			}
+			
+			.bx .container .left{
+				width: 201px;
+				height: 43px;
+				padding-top: 19px;
+				color: #FFFFFF;
+				font-size: 25px;
+				float: left;
+				text-shadow: 2px 2px 2px grey;
+			}
+			.bx .container .right{
+				overflow: hidden;
+				width: 124px;
+				height: 40px;
+				padding-top: 19px;
+				float: right;
+			}
+			.bx .container .right span,a{
+				font-size: 16px;
+				color: #fff;
+				text-shadow: 4px 4px 4px black;
+			}
+			.bx .container .right span,a:hover {
+			text-shadow: 3px 3px 3px white;
+			}
+			.bx .container .right .l{
+				float: left;
+			}
+			.bx .container .right .r{
+				float: right;
+			}
+			.btn_exit{
+			border-radius:2px;
+			}
+			.btn_exit:hover{
+			border-radius:6px;
+			box-shadow:2px 2px 2px black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="bx">
+			<div class="container">
+				<h2 class="left">小型财务管理系统</h2>
+				<div align="center" class="right">
+					<a href="login.html" target="_parent">
+						<tr>
+							<td colspan="2" >
+								<input type="submit" id="" value="退出系统" class="btn_exit"/>
+							</td>
+						</tr>
+					</a>
+				</div>
+				<div align="center" class="right"><a href="javascript:window.parent.location.reload()">刷新</a></div>
+				<div align="center" class="right"><a href="javascript:history.go(-1);">后退</a></div>
+				 <div align="center" class="right"><a href="javascript:history.go(1);">前进</a></div>
+				<div align="center" class="right"><a href="AdminIndex.jsp" target="_top">首页</a></div>
+				<div align="center" id="welcome" class="right" style="color:gold;font-size:0px;text-shadow:2px 2px 2px red;margin-right:17em">您好</div> 
+			</div>
+		</div>
+	</body>
+</html>
